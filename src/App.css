@@ -1,0 +1,135 @@
+#root {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.sky   { background: radial-gradient(#b6cfdb, #889fb9); }
+.pink  { background: radial-gradient(#ebd0d5, #fbb0ad); }
+.green { background: radial-gradient(#b4cab7, #b7bcb2); }
+.gray  { background: radial-gradient(#576063, #3d3d3c); }
+
+.sectionsContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+}
+.sections{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+@keyframes opacityFade {
+  100% {opacity: 0;}
+}
+@keyframes opacityShow {
+  100% {opacity: 1; visibility: visible;}
+}
+.sections:hover{
+  width: 150%;
+}
+
+.sections:hover .textImage,
+.sections:hover .priceText,
+.sections:hover .dexriptionText,
+.sections:hover .shopNow {
+  animation: opacityShow 2s forwards;
+}
+.sections:hover .logoItem {
+  scale: 1.3;
+  transition: all 1s ease-in-out;
+}
+.sections .logoItem{
+  width: 60%;
+  height: fit-content;
+  object-fit: contain;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  z-index: 90;
+}
+
+.sections .priceText{
+  color: white;
+  opacity: 0;
+  font-size: 52px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 15px;
+  padding: 10px;
+  z-index: 90;
+}
+.sections .dexriptionText{
+  width: 80%;
+  position: relative;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+  z-index: 90;
+  max-width: 300px;
+}
+
+.textImagesDiv{
+  margin-top: 15vh;
+  margin-bottom: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.textImagesDiv .textImage{
+  margin: auto;
+  width: 90%;
+  object-fit: fill;
+  opacity: 0;
+}
+
+.sections .shopNow{
+  margin: auto;
+  margin-bottom: 50px;
+  padding: 10px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.imagesDiv{
+  width: 100%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.createdText{
+  z-index: 100;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 12px;
+  color: rgb(68, 68, 68);
+  text-decoration: none;
+  background-color: rgba(240, 248, 255, 0.685);
+  padding: 4px;
+  border-radius: 3px;
+  backdrop-filter: blur(3px);
+}
