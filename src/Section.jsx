@@ -5,11 +5,11 @@ function Section({item}) {
     <>
       <div className={`sections ${item.color}`}>
         <div className='imagesDiv'>
-          <img className='logoItem' src={`./images/${item.image}.png`} alt={item.image} />
+          <img className='logoItem' src={`./images/${item.image}.png`} alt={item.image} loading="lazy"/>
           <div className='textImagesDiv'>
-            <img className='textImage' src={`./images/${item.image}text.png`} />
-            <img className='textImage' src={`./images/${item.image}textfilled.png`} />
-            <img className='textImage' src={`./images/${item.image}text.png`} />
+            <img className='textImage' src={`./images/${item.image}text.png`} loading="lazy"/>
+            <img className='textImage' src={`./images/${item.image}textfilled.png`} loading="lazy"/>
+            <img className='textImage' src={`./images/${item.image}text.png`} loading="lazy"/>
           </div>
         </div>
         <h2 className='priceText'>${item.price}</h2>

@@ -90,8 +90,8 @@
 }
 
 .textImagesDiv .textImage{
-  margin: auto;
   width: 90%;
+  margin: auto;
   object-fit: fill;
   opacity: 0;
 }
